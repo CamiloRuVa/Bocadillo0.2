@@ -2,8 +2,6 @@ import React from 'react';
 import { View, Image, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import styles from '../styles/sGeneralStyles';
-import { createDrawerNavigator } from '@react-navigation/drawer';
-import ScreenInicio from '../screens/screenInicio';
 
 const ScreenGeneral = ( {navigation} ) => {
   return (      
@@ -26,17 +24,4 @@ const ScreenGeneral = ( {navigation} ) => {
   );
 }
 
-const Drawer = createDrawerNavigator();
-
-export default function LateralStack( {navigation} ) {
-  return (
-    <Drawer.Navigator 
-      initialRouteName="ScreenGeneral" 
-      screenOptions={ { headerShown: false } }>
-      <Drawer.Screen name="Principal" component={ScreenGeneral} />
-      <Drawer.Screen name="Cerrar Sesión" component={ScreenInicio} />
-    </Drawer.Navigator>    
-  );
-}
-
-//export default ScreenGeneral;
+export default ScreenGeneral;

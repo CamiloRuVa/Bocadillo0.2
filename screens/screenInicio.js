@@ -23,12 +23,16 @@ const ScreenInicio = ( {navigation} ) =>{
 
         <TouchableOpacity
           style = { styles.button }
-          onPress = { () => { navigation.navigate('General') }}
-        >
+          onPress = { () => { navigation.navigate('General') }}>            
           <Text style={ styles.buttonText } >Iniciar Sesión</Text>
         </TouchableOpacity>
 
-        <Text style={styles.textoSecundario}>¿No tienes cuenta? <Text style={{color: '#cb0519'}} onPress = { () => { navigation.navigate('Registro') }}>Registrate Aquí</Text></Text>
+        <Text style={styles.textoSecundario}>
+          ¿No tienes cuenta? 
+          <Text style={{color: '#cb0519'}} onPress = { () => { navigation.navigate('Registro') }}>
+            Registrate Aquí
+          </Text>
+        </Text>
       </View>
       
     </View>
